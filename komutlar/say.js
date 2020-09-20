@@ -9,11 +9,11 @@ module.exports.run = async (client, message, args) => {
 
 
   
-  let tag = 'user tag'
-  let etiket = 'user discrim'
+
+  let etiket = '0017'
   const nooraembed = new Discord.RichEmbed()
   .setColor("Black")
-       .setDescription(`**>** Sunucuda **${message.guild.memberCount}** adet üye var.\n**>** Şu anda toplam **${count}** kişi seslide.\n**>** Toplamda **${message.guild.members.filter(m => m.user.username.includes(tag)).size}** kişi tagımızı alarak bizi desteklemiş.\n**>** Toplamda **${message.guild.members.filter(m => m.user.discriminator.includes(etiket)).size}** kişi etiketine ${etiket} alıp bizi desteklemiş.`)
+       .setDescription(`**>** Sunucuda **${message.guild.memberCount}** adet üye var.\n**>** Şu anda toplam **${count}** kişi seslide.\n**>** Toplamda **${message.guild.members.filter(m => m.user.discriminator.includes(etiket)).size}** kişi etiketine ${etiket} alıp bizi desteklemiş.`)
     
   message.channel.send(nooraembed)
   message.react(emoji)
